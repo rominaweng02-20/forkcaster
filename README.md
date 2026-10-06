@@ -19,7 +19,7 @@ URL: https://forkcaster-git-708411086094.europe-west1.run.app
   - **Arguments:** latitude, longitude, category, radius, cuisine
 
 ### `get_occasion_profile` *(original)*
- Translates a user’s occasion, group size, duration, and weather into weighted recommendation criteria and suggested place categories for the chatbot to weigh out its recommendations
+ Translates a user’s occasion, group size, duration, and weather into a weighted recommendation criteria and suggests place categories for the chatbot to weigh out its recommendations
  - **Arguments:** occasion, group size, duration, weather
 
 ### `score_places_for_occasion` *(original)*
