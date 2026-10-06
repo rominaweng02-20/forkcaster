@@ -9,7 +9,6 @@ Beyond basic location-based search, the chatbot personalizes recommendations bas
 URL: https://forkcaster-git-708411086094.europe-west1.run.app
 
 ## Tools Implemented
-Name and describe your tools and their arguments well and gracefully handle errors relaying actionable information to the model
 
 ### `geocode_location`
  Using the Open Street Map data, it intakes a place name or address as a String and returns its coordinates. If it can't find a specific name, it may prompt to be more specific of the location using a city or state.
