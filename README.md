@@ -50,11 +50,11 @@ URL: https://forkcaster-git-708411086094.europe-west1.run.app
 ## Sample Queries to Test With
 
 ### Query 1: First date in the East Village
-> I have a first date next weekend in the East Village, provide me restaurant recommendations with outdoor seating for this occasion.
+> I have a first date next weekend in the East Village, provide me restaurant recommendations. 
 
 **Follow-ups:**
-1. I am only interested in Italian food, update your recommendations and explain how you'd rank them for a date?
-2. Of these options, I'm more inclined towards the 2nd option, help me find a dessert location for after dinner.
+1. I am only interested in Italian food with outdoor seating, update your recommendations and explain how you'd rank them for a date?
+2. Of these options, I'm more inclined towards the 2nd option, help me find a dessert location for after dinner, am open to walking up to 10 minutes.
 3. What's a nice bar within a 10 minute walk that we can go to afterwards?
 
 
