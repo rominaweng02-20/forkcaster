@@ -72,6 +72,8 @@ CRITERION_HELP = {
     "indoor": "Is an indoor venue (matters when rainy)",
     "wheelchair": "Wheelchair accessible",
     "large_party": "Capacity fits the group (rarely tagged, so often unknown)",
+    "reservations": "Takes reservations (important for celebrations)",
+
 }
 
 OCCASION_PROFILES = {
@@ -476,6 +478,11 @@ TOOLS = [
                         "type": "integer",
                         "description": "Search radius in meters (100-3000). Default 800, roughly a 10-minute walk.",
                     },
+                    "cuisine": {
+                        "type": "string",
+                        "enum": list(CUISINE_ALIASES),
+                        "description": "Optional. Only return places serving this cuisine. Omit if not requested.",
+                    },
                 },
                 "required": ["lat", "lon", "category"],
             },
@@ -534,8 +541,6 @@ TOOLS = [
                                 "outdoor_seating": {"type": "string"},
                                 "wheelchair": {"type": "string"},
                                 "capacity": {"type": "string"},
-                                "rating": {"type": "number"},
-                                "review_count": {"type": "integer"},
                             },
                             "required": ["name"],
                         },
@@ -569,5 +574,6 @@ def run_tool(name: str, args: dict) -> str:
         return json.dumps({"error": f"Unknown tool '{name}'. Available: {list(TOOL_MAP)}"})
     try:
         return TOOL_MAP[name](**args)
-    except TypeError as e:
-        return json.dumps({"error": f"Bad arguments for {name}: {e}"})
+    except Exception as e:
+        return json.dumps({"error": f"Tool {name} failed: {type(e).__name__}: {e}",
+                           "hint": "Check the arguments and try again, or continue without this tool."})
