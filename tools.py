@@ -129,7 +129,7 @@ def _distance_m(lat1, lon1, lat2, lon2) -> int:
     return round(2 * r * math.asin(math.sqrt(a)))
 
 def geocode_location(place_name: str) -> str:
-    """Turn a place name or address into map coordinates."""
+    """Converts a place name or address into map coordinates."""
     try:
         resp = requests.get(
             NOMINATIM_URL,
