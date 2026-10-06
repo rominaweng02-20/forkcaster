@@ -10,7 +10,7 @@ URL: https://forkcaster-git-708411086094.europe-west1.run.app
 
 ## Tools Implemented
 
-### `geocode_location`
+### `geocode_location` *(Tool Requesting External API)*
  Using the Open Street Map data, it intakes a place name or address as a String and returns its coordinates. If it can't find a specific name, it may prompt to be more specific of the location using a city or state.
   - **Arguments:** place name (str)
 
